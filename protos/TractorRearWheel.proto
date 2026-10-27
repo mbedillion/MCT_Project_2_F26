@@ -1,0 +1,47 @@
+#VRML_SIM R2025a utf8
+
+PROTO TractorRearWheel [
+  field SFString name "tractor rear wheel"
+  field SFFloat tireRadius 0.6
+  field SFFloat width 0.37
+  field SFInt32 subdivision 24
+  field SFNode physics Physics { density -1 mass 60 }
+]
+{
+  Slot {
+    type "vehicle wheel"
+    endPoint Solid {
+      children [
+        Pose {
+          rotation -1 0 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.08 0.08
+                roughness 0.8
+              }
+              geometry Cylinder {
+                height IS width
+                radius IS tireRadius
+                subdivision IS subdivision
+              }
+            }
+          ]
+        }
+      ]
+      name IS name
+      model "tractor rear wheel"
+      boundingObject Pose {
+        rotation -1 0 0 1.5707963267948966
+        children [
+          Cylinder {
+            height IS width
+            radius IS tireRadius
+            subdivision IS subdivision
+          }
+        ]
+      }
+      physics IS physics
+    }
+  }
+}
