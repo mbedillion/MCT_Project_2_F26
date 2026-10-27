@@ -1,10 +1,5 @@
 # MCT-F26 Project 2
 
-MATLAB R2025a backend for the Project 2 state-feedback-control assignment,
-migrated from the supplied Webots R2021-era world to Webots R2025a while
-retaining its student-facing behavior.
-Python is not required by the converted project.
-
 ## Requirements
 
 - Webots R2025a
